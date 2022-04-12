@@ -25,7 +25,7 @@ const Button = ({
     cursor,
     outline,
     padding: `${scale * 0.5}rem ${scale * 1}rem`,
-    fontSize: `${fontSize}px`,
+    fontSize: `${fontSize}`,
     borderRadius,
     border,
   };
@@ -40,6 +40,21 @@ const Button = ({
 Button.propTypes = {
   label: PropTypes.string,
   backgroundColor: PropTypes.string,
+  color: PropTypes.string,
+  cursor: PropTypes.oneOf([
+    "auto",
+    "pointer",
+    "help",
+    "wait",
+    "crosshair",
+    "not-allowed",
+    "zoom-in",
+    "grab",
+  ]),
+  outline: PropTypes.string,
+  border: PropTypes.string,
+  borderRadius: PropTypes.number,
+  fontSize: PropTypes.string,
   size: PropTypes.oneOf(["xs", "sm", "md", "lg"]),
   handleClick: PropTypes.func,
 };
