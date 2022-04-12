@@ -13,11 +13,27 @@ const Button = ({
   borderRadius,
   border,
 }) => {
+  /*
+   * Set the button scale and font size
+   */
   let scale = 1;
-  if (size === "xs") (scale = 0.5), (fontSize = 12);
-  if (size === "sm") (scale = 0.75), (fontSize = 14);
-  if (size === "md") (scale = 1), (fontSize = 16);
-  if (size === "lg") (scale = 1.25), (fontSize = 18);
+  switch (size) {
+    case "xs":
+      (scale = 0.5), (size = 12);
+      break;
+    case "sm":
+      (scale = 0.75), (fontSize = 14);
+      break;
+    case "md":
+      (scale = 1), (fontSize = 16);
+      break;
+    case "lg":
+      (scale = 1.25), (fontSize = 18);
+      break;
+    default:
+      (scale = 1), (fontSize = 16);
+      break;
+  }
 
   const style = {
     backgroundColor,
