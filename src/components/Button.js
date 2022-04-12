@@ -12,6 +12,7 @@ const Button = ({
   fontSize,
   borderRadius,
   border,
+  boxShadow
 }) => {
   /*
    * Set the button scale and font size
@@ -44,6 +45,7 @@ const Button = ({
     fontSize: `${fontSize}`,
     borderRadius,
     border,
+    boxShadow
   };
 
   return (
@@ -73,6 +75,7 @@ Button.propTypes = {
   fontSize: PropTypes.string,
   size: PropTypes.oneOf(["xs", "sm", "md", "lg"]),
   handleClick: PropTypes.func,
+  boxShadow: PropTypes.string
 };
 
 export default Button;
